@@ -9,17 +9,37 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<style>
+		/* https://codepen.io/nikita1/pen/NeNOmZ */
+		body {
+		  width: 100%;
+		  height: 100%;
+		  padding: 0;
+		  margin: 0;
+		  background: rgb(119, 13, 13);
+		  background: radial-gradient(
+			circle,
+			rgba(119, 13, 13, 0.92) 64%,
+			rgba(0, 0, 0, 0.6) 100%
+		  );
+		}
 		
+		canvas {
+			width: 100%;
+			height: 100%;
+			position:fixed;
+			top:0;
+			left:0;
+		}
 	</style>
 	
 	</head>
 	<body data-spy="scroll" data-target=".navbar" data-offset="50"  >
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-3 bg-dark" style="font-family: 'Unlock', cursive;">
+				<div class="col-sm-3" style="font-family: 'Unlock', cursive;">
 				
 				</div>
-				<div class="col-sm-3 bg-dark" style="font-family: 'Unlock', cursive;">
+				<div class="col-sm-3" style="font-family: 'Unlock', cursive;">
 					<nav id="navbar-main" class="navbar navbar-dark sticky-top">
 						<ul class="navbar-nav">
 							<li class="nav-item">
@@ -37,7 +57,7 @@
 						</ul>
 					</nav>
 				</div>
-				<div class="col-sm-6 bg-light"  style="font-family: 'Unlock', cursive;">
+				<div class="col-sm-6"  style="font-family: 'Unlock', cursive;">
 					<section id="content-about" class="fas fa-comment-dots">
 						<h1><i class="fas fa-address-book">ABOUT ME</i></h1>
 						<p>
@@ -230,5 +250,96 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			/* https://codepen.io/nikita1/pen/NeNOmZ */
+			class Snowflake {
+				constructor() {
+					this.x = 0;
+					this.y = 0;
+					this.vx = 0;
+					this.vy = 0;
+					this.radius = 0;
+					this.alpha = 0;
+
+					this.reset();
+				}
+
+				reset() {
+					this.x = this.randBetween(0, window.innerWidth);
+					this.y = this.randBetween(0, -window.innerHeight);
+					this.vx = this.randBetween(-3, 3);
+					this.vy = this.randBetween(2, 5);
+					this.radius = this.randBetween(1, 4);
+					this.alpha = this.randBetween(0.1, 0.9);
+				}
+
+				randBetween(min, max) {
+					return min + Math.random() * (max - min);
+				}
+
+				update() {
+					this.x += this.vx;
+					this.y += this.vy;
+
+					if (this.y + this.radius > window.innerHeight) {
+						this.reset();
+					}
+				}
+			}
+
+			class Snow {
+				constructor() {
+					this.canvas = document.createElement("canvas");
+					this.ctx = this.canvas.getContext("2d");
+
+					document.body.appendChild(this.canvas);
+
+					window.addEventListener("resize", () => this.onResize());
+					this.onResize();
+					this.updateBound = this.update.bind(this);
+					requestAnimationFrame(this.updateBound);
+
+					this.createSnowflakes();
+				}
+
+				onResize() {
+					this.width = window.innerWidth;
+					this.height = window.innerHeight;
+					this.canvas.width = this.width;
+					this.canvas.height = this.height;
+				}
+
+				createSnowflakes() {
+					const flakes = window.innerWidth / 4;
+		
+					this.snowflakes = [];
+
+					for (let s = 0; s < flakes; s++) {
+						this.snowflakes.push(new Snowflake());
+					}
+				}
+
+				update() {
+					this.ctx.clearRect(0, 0, this.width, this.height);
+
+					for (let flake of this.snowflakes) {
+						flake.update();
+
+						this.ctx.save();
+						this.ctx.fillStyle = "#FFF";
+						this.ctx.beginPath();
+						this.ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+						this.ctx.closePath();
+						this.ctx.globalAlpha = flake.alpha;
+						this.ctx.fill();
+						this.ctx.restore();
+					}
+					requestAnimationFrame(this.updateBound);
+				}
+			}
+
+			new Snow();
+		</script>
+		
 	</body>
 </html>
