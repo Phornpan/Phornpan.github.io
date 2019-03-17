@@ -17,12 +17,18 @@
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+	
+	<link rel="icon"  href="img/12.png">
+	
+
+
+
   </head>
   <body>
 
     <!-- Loader
     ================================================== -->
-    <div id="preloader">
+	<div id="preloader">
       <div class='loader-ring'>
         <div class='loader-ring-light'></div>
         <div class='loader-ring-track'></div>
@@ -34,12 +40,12 @@
 
     <!-- Navbar
     ================================================== -->
-    <nav class="navbar navbar-expand-lg">
+	<nav class="navbar navbar-expand-lg">
       <div class="container">
 
-        <li class="nav-item">
-            <a class="nav-link"  data-scroll-nav="1">M O D</a>
-        </li>
+        <a class="navbar-brand" href="#">
+          <span class="nav-link" href="#" data-scroll-nav="0">MOD</span>
+        </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="fas fa-bars"></span>
@@ -49,7 +55,7 @@
           <ul class="navbar-nav ml-auto">
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-scroll-nav="1">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-scroll-nav="0">Home <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item">
@@ -57,7 +63,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#" data-scroll-nav="3">Services</a>
+              <a class="nav-link" href="#" data-scroll-nav="3">Education</a>
             </li>
 
             <li class="nav-item">
@@ -77,19 +83,18 @@
 
     <!-- Header
     ================================================== -->
-    <header id="home" class="header cover-bg" data-image-src="img/logo-1.jpg" data-overlay='7' data-scroll-index='1'>
+    <header id="home" class="header cover-bg" data-image-src="img/logo-1.jpg" data-overlay='7' data-scroll-index='0'>
       <div class="container h-100">
         <div class="row align-items-center h-100">
 
           <div class="col-12 caption">
             <h4>Hello , my name is <span>Phornpan  Trakulkachonsak</span></h4>
-            <h2 class="mt-20 mb-20">I'M <span></span></h2>
-            <p class="mt-20">Think of a creative digital agency like dreamy in Paris,<br> turning your dreams into reality.</p>
-
+            <h2 class="mt-20 mb-20">I'M <span> </span></h2>
+            <p class="mt-20">The best preparation for tomorrow is doing your best today.<p>
 
             <div class="scoial-icon mt-20 text-center">
-              <a href="#0"><span><i class="fab fa-facebook-f"></i></span></a>
-              <a href="#0"><span><i class="fab fa-github"></i></span></a>
+              <a href="https://www.facebook.com/Phornpan2840?ref=bookmarks"><span><i class="fab fa-facebook-f"></i></span></a>
+              <a href="https://github.com/Phornpan"><span><i class="fab fa-github"></i></span></a>
               <a href="#0"><span><i class="fab fa-line"></i></span></a>
               <a href="#0"><span><i class="fab fa-instagram"></i></span></a>
             </div>
@@ -115,15 +120,16 @@
 
           <div class="col-lg-6 sm-mb-30">
             <div class="part-photo">
-              <img src="img/hero-about.jpg" alt="">
+              <img src="img/logo-1.jpg" alt="">
             </div>
           </div>
 
           <div class="col-lg-6">
             <div class="part-text">
               <h4 class="mb-30">Hello</h4>
-              <p class="pb-35"> I’m <strong> MOD . </strong>^^</p>
-
+              <p class="pb-35"> I’m <strong> MOD . </strong>Hello! my full name is Phornpan  Trakulkachonsak and I am a programmer student.
+															I guess you're here because you want to know a bit about me, huh? let get it . . . </p>
+			
               <div class="info mt-35">
                 <ul>
                   
@@ -131,26 +137,37 @@
                     <span class="title">Name</span>
                     <span class="value">Phornpan Trakulkachonsak</span>
                   </li>
-                  
-				  <li>
-                    <span class="title">Address</span>
-                    <span class="value">2241/2 Soi RongNganYaSup Rama IV Road Tambon KlongToei  Aumpur  KlongToei Bangkok Thailand</span>
-                  </li>
-                  
-				  <li>
+				  
+				   <li>
                     <span class="title">Age</span>
                     <span class="value">21</span>
                   </li>
 
 				  <li>
-                    <span class="title">NAtionality</span>
+                    <span class="title">Nationality</span>
                     <span class="value">Thai</span>
                   </li>
+				  
 				  <li>
                     <span class="title">Date Of Birth</span>
                     <span class="value">28 July 1997</span>
                   </li>
-				            
+				  
+				  <li>
+                    <span class="title">Status</span>
+                    <span class="value">single</span>
+                  </li>
+
+				  <li>
+                    <span class="title">Religion</span>
+                    <span class="value">Buddha</span>
+                  </li>
+
+				  <li>
+                    <span class="title">Address</span>
+                    <span class="value">2241/2 Soi RongNganYaSup Rama IV Road Tambon KlongToei  Aumpur  KlongToei Bangkok Thailand</span>
+                  </li>
+                    
 				</ul>
               </div>
             </div>
@@ -168,27 +185,19 @@
     <section class="skills section-padding">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 sm-mb-50">
+          
+		  <div class="col-lg-6 sm-mb-50">
             <div class="part-text">
-              <h4 class="mb-30">EDUCATION.</h4>
-              2016 to Current
-			  <p>Bachelor's degree - Computer Science Faculty of Science and Information
-			  Technology Rajamangala University of Technology, Bangkok with an average GPA of 3.23</p>
+              <h4 class="mb-30">5555.</h4>
 			  
-			  2013 -2015
-			  <p>High School – Education Program Science – Mathematics, Saipanya High
-			  School, Bangkok THAILAND with an average GPA of 3.00</p>
-			  
-			  2010 -2012 
-			  <p>Junior high school –Sainampeung School, Bangkok THAILAND
-			  with an average GPA of 3.35</p>
+			  <p>zvdsvds</p>
             </div>
           </div>
 
           <div class="col-lg-6">
             <div class="part-skills">
               <div class="skills-item mb-30">
-				<h4 class="mb-30">SKILLS</h4>
+				<h4 class="mb-30">PROGRAMMING SKILLS</h4>
                 <h6>CSS</h6>
                 <div class="bar">
                   <span class="fill" data-width="87%"></span>
@@ -235,8 +244,8 @@
         <div class="row">
 
           <div class="section-title text-center">
-            <p>What I Do?</p> <br>
-            <h3>Services<cite> .</cite></h3>
+            <p>What I learning?</p> <br>
+            <h3>EDUCATION<cite> .</cite></h3>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-30">
@@ -245,32 +254,9 @@
                 <i class="jam jam-brush"></i>
               </div>
               <div class="text">
-                <h4 class="box-title mb-20">Web design</h4>
-                <p>Extreme attention to detail is the essence of Boo’s unique design concepts.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-30">
-            <div class="services-box box">
-              <div class="icon">
-                <i class="jam jam-cogs"></i>
-              </div>
-              <div class="text">
-                <h4 class="box-title mb-20">Web development</h4>
-                <p>Extreme attention to detail is the essence of Boo’s unique design concepts.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-30">
-            <div class="services-box box">
-              <div class="icon">
-                <i class="jam jam-camera"></i>
-              </div>
-              <div class="text">
-                <h4 class="box-title mb-20">Photography</h4>
-                <p>Extreme attention to detail is the essence of Boo’s unique design concepts.</p>
+                <h4 class="box-title mb-20">2016 to Current</h4>
+                <p>Bachelor's degree - Computer Science Faculty of Science and Information
+					Technology Rajamangala University of Technology, Bangkok with an average GPA of 3.23</p>
               </div>
             </div>
           </div>
@@ -281,32 +267,22 @@
                 <i class="jam jam-phone"></i>
               </div>
               <div class="text">
-                <h4 class="box-title mb-20">Responsive Design</h4>
-                <p>Extreme attention to detail is the essence of Boo’s unique design concepts.</p>
+                <h4 class="box-title mb-20">2013 -2015</h4>
+                <p>High School – Education Program Science – Mathematics, Saipanya High
+					School, Bangkok THAILAND with an average GPA of 3.00</p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 xs-mb-30">
+		<div class="col-lg-4 col-md-6 mb-30">
             <div class="services-box box">
               <div class="icon">
-                <i class="jam jam-pie-chart"></i>
+                <i class="jam jam-cogs"></i>
               </div>
               <div class="text">
-                <h4 class="box-title mb-20">Seo Friendly</h4>
-                <p>Extreme attention to detail is the essence of Boo’s unique design concepts.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="services-box box">
-              <div class="icon">
-                <i class="jam jam-wrench"></i>
-              </div>
-              <div class="text">
-                <h4 class="box-title mb-20">Support</h4>
-                <p>Extreme attention to detail is the essence of Boo’s unique design concepts.</p>
+                <h4 class="box-title mb-20">2010 -2012</h4>
+				<p>Junior high school –Sainampeung School, Bangkok THAILAND
+					with an average GPA of 3.35</p>
               </div>
             </div>
           </div>
@@ -330,15 +306,15 @@
 
         <div class="filtering text-center mb-50">
           <button type="button" data-filter='*' class="active">All</button>
-          <button type="button" data-filter='.brand'>IC3</button>
-          <button type="button" data-filter='.web'>MTA</button>
-          <button type="button" data-filter='.photo'>other</button>
+          <button type="button" data-filter='.IC3'>IC3</button>
+          <button type="button" data-filter='.MTA'>MTA</button>
+          <button type="button" data-filter='.other'>other</button>
         </div>
 
         <!-- gallery -->
         <div class="gallery ohidden no-padding col-12">
 
-          <div class="col-lg-4 col-md-6 video web mb-30">
+          <div class="col-lg-4 col-md-6 video IC3 mb-30">
             <div class="item-img">
               <a class="single-image" href="img/portfolio/1.png"></a>
               <div class="part-img">
@@ -351,7 +327,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 brand mb-30">
+          <div class="col-lg-4 col-md-6 MTA mb-30">
             <div class="item-img">
               <a class="single-image" href="img/portfolio/2.png"></a>
               <div class="part-img">
@@ -364,7 +340,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 photo web mb-30">
+          <div class="col-lg-4 col-md-6 MTA mb-30">
             <div class="item-img video">
               <a class="single-image" href="img/portfolio/3.png"></a>
               <div class="part-img">
@@ -377,7 +353,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 brand photo sm-mb-30">
+          <div class="col-lg-4 col-md-6 other sm-mb-30">
             <div class="item-img video">
               <a class="single-image" href="img/portfolio/4.png"></a>
               <div class="part-img">
@@ -390,7 +366,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 video sm-mb-30">
+          <div class="col-lg-4 col-md-6 other sm-mb-30">
             <div class="item-img video">
               <a class="single-image" href="img/portfolio/5.png"></a>
               <div class="part-img">
@@ -398,19 +374,6 @@
                 <div class="overlay-img">
                   <h4>ARIT</h4>
                   <h6>Huawai ICT Competition</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 photo">
-            <div class="item-img video">
-              <a class="single-image" href="img/portfolio/6.png"></a>
-              <div class="part-img">
-                <img src="img/portfolio/6.png" alt="image">
-                <div class="overlay-img">
-                  <h4>Web</h4>
-                  <h6>Creative Design</h6>
                 </div>
               </div>
             </div>
@@ -485,8 +448,8 @@
         <div class="row">
 		
           <div class="scoial-icon text-center">
-              <a href="#0"><span><i class="fab fa-facebook-f"></i></span></a>
-              <a href="#0"><span><i class="fab fa-github"></i></span></a>
+              <a href="https://www.facebook.com/Phornpan2840?ref=bookmarks"><span><i class="fab fa-facebook-f"></i></span></a>
+              <a href="https://github.com/Phornpan"><span><i class="fab fa-github"></i></span></a>
               <a href="#0"><span><i class="fab fa-line"></i></span></a>
               <a href="#0"><span><i class="fab fa-instagram"></i></span></a>
           </div>
